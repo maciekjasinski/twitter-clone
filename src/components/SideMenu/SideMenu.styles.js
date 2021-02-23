@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @media screen and (max-width: 1360px) {
+    @media screen and (max-width: 1280px) {
         width: 70px;
         display: flex;
         flex-direction: column;
@@ -27,7 +27,7 @@ export const StyledLogo = styled(Logo)`
     fill: ${({ theme }) => theme.colors.primary};
     margin-bottom: 20px;
     padding-left: 14px;
-    @media screen and (max-width: 1360px) {
+    @media screen and (max-width: 1280px) {
         padding: 0
     }
 `;
@@ -57,7 +57,7 @@ export const StyledNavLink = styled(NavLink).attrs({ activeClassName })`
         color: ${({ theme }) => theme.colors.primary};
         border-radius: 9999px;
     }
-    @media screen and (max-width: 1360px) {
+    @media screen and (max-width: 1280px) {
         width: 44px;
         padding: 0;
         display: flex;
@@ -83,7 +83,7 @@ export const TweetButton = styled.button`
     font-size: 14px;
     font-weight: bold;
     width: 100%;
-    @media screen and (max-width: 1360px) {
+    @media screen and (max-width: 1280px) {
         width: 44px;
         height: 44px;
         display: flex;
@@ -115,7 +115,7 @@ export const UserWrapper = styled.div`
             color: ${({ theme }) => theme.colors.white};
         }
     }
-    @media screen and (max-width: 1360px) {
+    @media screen and (max-width: 1280px) {
         grid-template-columns: 1fr;
         padding: 0;
         > svg {
@@ -132,7 +132,7 @@ export const UserDisplayName = styled.p`
     color: ${({ theme }) => theme.colors.black};
     font-size: 14px;
     font-weight: bold;
-    @media screen and (max-width: 1360px) {
+    @media screen and (max-width: 1280px) {
         display: none;
     }
 `;
@@ -141,7 +141,7 @@ export const UserName = styled.p`
     margin: 0;
     color: ${({ theme }) => theme.colors.gray};
     font-size: 14px;
-    @media screen and (max-width: 1360px) {
+    @media screen and (max-width: 1280px) {
         display: none;
     }
 `;
