@@ -1,16 +1,23 @@
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import { theme } from './theme';
 import { Login } from './pages/Login/Login';
+import { Home } from './pages/Home/Home';
 import { SideMenu } from './components/SideMenu/SideMenu';
-import styled from 'styled-components';
 
 const Container = styled.div`
   display: grid;
   grid-template-columns: 300px 600px 350px;
   margin: auto;
   width: 1250px;
-  /* add responsive */
+  @media screen and (max-width: 1280px) {
+    grid-template-columns: 70px 600px 350px;
+    width: 1020px;
+  }
+  @media screen and (max-width: 690px) {
+    width: 100%;
+    grid-template-columns: 70px auto;
+  }
 `;
 
 function App() {
@@ -24,7 +31,7 @@ function App() {
           <Container>
             <SideMenu />
             <Route path="/home">
-              Home
+              <Home />
             </Route>
             <Route path="/explore">
               Explore

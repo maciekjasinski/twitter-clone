@@ -4,6 +4,9 @@ import background from '../../assets/background.png';
 export const Container = styled.div`
     height: 100vh;
     width: 100%;
+    @media screen and (max-width: 690px) {
+        height: auto;
+    }
 `;
 
 export const GridWrapper = styled.div`
@@ -80,6 +83,7 @@ export const FormWrapper = styled.div`
         font-size: 14px;
         outline: none;
         background-color: ${({ theme }) => theme.colors.white};
+        cursor: pointer;
     }
     @media screen and (max-width: 960px) {
         display: none;
@@ -150,5 +154,8 @@ export const Footer = styled.div`
         color: ${({ theme }) => theme.colors.gray};
         margin: 5px 0;
         padding-right: 14px;
+    }
+    @media screen and (max-width: 690px) {
+        flex-wrap: wrap;
     }
 `;

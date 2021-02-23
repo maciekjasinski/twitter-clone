@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import {
     Container,
@@ -12,6 +12,10 @@ import {
 } from './Login.styles';
 
 export function Login() {
+    const history = useHistory();
+    const redirect = () => {
+        history.push('/home');
+    }
     return (
         <Container>
             <GridWrapper>
@@ -23,14 +27,14 @@ export function Login() {
                     <FormWrapper>
                         <input placeholder="Phone, email, or username" />
                         <input type="password" placeholder="Password"/>
-                        <button>Log in</button>
+                        <button onClick={redirect}>Log in</button>
                     </FormWrapper>
                     <div className="content">
                         <Logo />
                         <h1>Happening now</h1>
                         <h2>Join Twitter today</h2>
                         <SignUpButton>Sign up</SignUpButton>
-                        <LogInButton>Log in</LogInButton>
+                        <LogInButton onClick={redirect}>Log in</LogInButton>
                     </div>
                 </Wrapper>
             </GridWrapper>
