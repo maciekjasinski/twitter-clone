@@ -29,14 +29,9 @@ import {
 
 export function SideMenu() {
     const location = useLocation();
-    const renderIcon = (path, iconActive, icon) => {
-        if (path === location.pathname) {
-            return iconActive;
-        }
-        else {
-            return icon
-        }
-    }
+    const renderIcon = (path, iconActive, icon) => (
+        path === location.pathname ? iconActive : icon
+    )
     return (
         <Wrapper>
             <div>
